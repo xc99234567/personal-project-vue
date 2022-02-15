@@ -1,0 +1,161 @@
+@import "swiper/swiper.scss";
+@import 'swiper/modules/pagination/pagination.scss';
+@import 'swiper/modules/navigation/navigation.scss';
+
+
+/* 輪播套件 */
+.mySwiper {
+    width: 100%;
+    height: 480px;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 767.98px) {
+    .mySwiper {
+        height: 360px;
+    }
+}
+
+/* 輪播游標改手 */
+.mySwiper:hover {
+    cursor: pointer;
+}
+
+
+/* 輪播的圖 */
+.mySwiper .swiper-wrapper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 左右按鈕 */
+.mySwiper .swiper-button {
+    position: absolute;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* 游標移入輪播 箭頭出現 */
+.mySwiper:hover .swiper-button {
+    opacity: 0.5;
+    width: 28px;
+    height: 36px;
+}
+
+/* 箭頭樣式 */
+.mySwiper .swiper-button::after {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+/* 上一頁箭頭 */
+.mySwiper .swiper-button-prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+/* 下一頁箭頭 */
+.mySwiper .swiper-button-next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+/* 移入箭頭hover */
+.mySwiper .swiper-button:hover {
+    opacity: 1;
+}
+
+/* 下面的點 */
+.mySwiper .swiper-pagination .swiper-pagination-bullet-active {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.mySwiper-pro {
+    width: 65%;
+    margin-bottom: 100px;
+
+    h2 {
+        font-size: 28px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .swiper-wrapper .swiper-slide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+
+        .product_link {
+            position: relative;
+            width: 80%;
+
+            img {
+                border-radius: 18px;
+                display: block;
+                width: 100%;
+                height: 480px;
+                object-fit: cover;
+            }
+
+            .black-bg {
+                border-radius: 18px;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition-property: height, top;
+                transition-duration: 1s;
+
+                .pro-name {
+                    font-size: 32px;
+                    color: rgba(255, 255, 255, 0.8);
+                    position: absolute;
+                    top: calc(50% - 16px);
+                    left: calc(50% - 32px);
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .mySwiper-pro .swiper-wrapper .swiper-slide:hover .product_link .black-bg {
+        height: 100px;
+        bottom: 0;
+        top: 80%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mySwiper-pro {
+        width: 80%;
+        height: 50%;
+    }
+
+    .mySwiper-pro .swiper-wrapper .swiper-slide {
+        .product_link {
+            img {
+                height: 360px;
+            }
+            .black-bg {
+                height: 20%;
+                bottom: 0;
+                top: 80%;
+            }
+            .pro-name {
+                top: 5%;
+                left: calc(50% - 32px);
+            }
+        }
+    }
+}

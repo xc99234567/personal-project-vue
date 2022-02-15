@@ -1,32 +1,34 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <NavHeader/>
+        <router-view/>
+        <CommonFooter/>
     </div>
-    <router-view/>
-  </div>
 </template>
 
+<script>
+
+import Aos from 'aos';
+import NavHeader from './components/NavHeader.vue';
+import CommonFooter from './components/CommonFooter.vue'
+export default {
+    name: 'App',
+    components:{NavHeader, CommonFooter},
+    mounted() {
+        Aos.init();
+    },
+}
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import '../node_modules/aos/dist/aos.css';
+* {
+    font-family: "Microsoft JhengHei", sans-serif;
+    font-weight: bold;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+body {
+    background-color: #eeece1;
+    box-sizing: border-box;
 }
 </style>

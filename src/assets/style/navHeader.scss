@@ -1,0 +1,390 @@
+/* header */
+header {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+}
+
+/* logo */
+header .logo {
+    width: 8.3%;
+    height: 8.3%;
+    margin: 10px 4% 10px 10px;
+
+    /* logo位置 */
+    a {
+        display: inline-block;
+        vertical-align: bottom;
+        width: 100%;
+        height: 100%;
+
+        /* logo圖大小 */
+        img {
+            width: 80px;
+        }
+    }
+}
+
+/* 導覽列 */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid #000;
+}
+
+// nav 選單
+.menu_wrapper {
+    /* 當前頁面標示 */
+    .current_page {
+        background: #b47804;
+    }
+
+    /* 選項外層li大小 & 背景過場 */
+    .nav_link {
+        width: 100px;
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+
+        /* 選項hover */
+        &:hover:not(.product) {
+            background-color: #b47804;
+            /* color: white; */
+        }
+
+        /* 選項內層a */
+        .page_link {
+            display: inline-block;
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 5px;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}
+
+/* 商品下拉選單wrapper */
+.product_popover {
+    position: relative;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    z-index: 2;
+    transition: height 0.2s;
+    border-radius: 0 0 5px 5px;
+
+    /* 下拉選項內容 */
+    .product_link {
+        padding: 0;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+
+        /* 下拉選項內容 */
+        .product_category_name {
+            height: 50px;
+            line-height: 50px;
+            transition: all 0.2s linear;
+
+            /* 下拉選項hover */
+            &:hover {
+                background: #b47804;
+            }
+        }
+    }
+}
+
+/* 右側icon */
+.icon_wrapper {
+    margin-left: auto;
+    padding-top: 15px;
+
+    /* icon內層a */
+    .icon_link {
+        display: inline-block;
+        margin-left: 15px;
+
+        /* icon大小 */
+        i {
+            color: black;
+            font-size: 20px;
+
+            /* popover三角形 */
+            .delta {
+                position: absolute;
+                border-width: 0px 0px;
+                border-color: transparent transparent rgb(255, 255, 255)
+                    transparent;
+                border-style: solid solid solid solid;
+                top: 15px;
+                right: 0;
+                z-index: 3;
+            }
+
+            /* popover wrapper */
+            .cart_popover_wrapper {
+                position: absolute;
+                background: rgb(255, 255, 255);
+                width: 0px;
+                height: 0px;
+                right: 0;
+                top: 30px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+                overflow: hidden;
+                transition: all 0.2s linear;
+                z-index: 2;
+
+                /* popover icon */
+                i {
+                    font-size: 50px;
+                    margin: 50px 67px 10px 67px;
+                    visibility: hidden;
+                }
+
+                /* popover span */
+                span {
+                    text-align: center;
+                    display: block;
+                    font-weight: normal;
+                    font-size: 14px;
+                    width: 200px;
+                    visibility: hidden;
+                }
+            }
+        }
+
+        /* icon hover 變色 */
+        &:hover > i {
+            color: #b47804;
+        }
+
+        /* cart */
+        .cart {
+            position: relative;
+
+            /* popover icon span hover */
+            &:hover .cart_popover_wrapper i,
+            &:hover .cart_popover_wrapper span {
+                visibility: visible;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    /* 垂直置中 */
+    header {
+        align-items: center;
+    }
+    /* 導覽列寬度 */
+    header nav {
+        width: 100%;
+    }
+
+    /* menu */
+    .menu_wrapper {
+        display: flex;
+
+        /* 固定選項的高 */
+        .nav_link {
+            height: 40px;
+        }
+
+        .product {
+            // 產品選項hover
+            &:hover {
+                /* 選項hover變色 */
+                a {
+                    background-color: #b47804;
+                }
+
+                /* 商品下拉選單hover展開 */
+                .product_popover {
+                    height: 150px;
+                }
+            }
+
+            /* 選項hover變色 */
+            &:hover > a {
+                background-color: #b47804;
+            }
+
+            /* 商品箭頭不顯示 */
+            .page_link i {
+                display: none;
+            }
+
+            /* 商品下拉選單hover */
+            .product_popover {
+                background: rgb(255, 255, 255);
+                box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+
+    // icon
+    .icon_wrapper {
+        // 購物車hover展開
+        .cart:hover {
+            /* 三角形hover */
+            .delta {
+                border-width: 8px 9px;
+            }
+
+            /* wrapper hover */
+            .cart_popover_wrapper {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        /* 漢堡按鈕隱藏 */
+        .hamburger {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.9);
+        position: sticky;
+        box-shadow: 0px 0 5px black;
+        z-index: 3;
+        top: 0;
+
+        /* logo */
+        .logo a img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    /* 最外層nav */
+    header nav {
+        border-bottom: none;
+        display: flex;
+        flex-direction: row-reverse;
+
+        /* 導覽列切換展開 */
+        .menu-on {
+            height: 100%;
+            z-index: 2;
+        }
+
+        /* 商品下拉wrapper */
+        .icon_wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            margin-right: 10px;
+            width: 200px;
+
+            /* 漢堡按鈕 */
+            .hamburger {
+                width: 25px;
+                height: 20px;
+                padding: 0;
+                margin-bottom: 10px;
+
+                /* 漢堡按鈕樣式 */
+                .hamburger-box {
+                    width: 100%;
+
+                    .hamburger-inner,
+                    .hamburger-inner::before,
+                    .hamburger-inner::after {
+                        width: 100%;
+                        margin-top: 1px;
+                        height: 3px;
+                    }
+                }
+            }
+        }
+
+        /* 展開時黑幕 */
+        .mask {
+            position: fixed;
+            height: 100vh;
+            width: calc(100% - 200px);
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s;
+        }
+
+        /* 黑幕切換展開 */
+        .mask-on {
+            opacity: 0.5;
+            z-index: 2;
+            visibility: visible;
+        }
+    }
+
+    /* 導覽列 */
+    .menu_wrapper {
+        position: fixed;
+        top: 82.4px;
+        width: 200px;
+        height: 0vh;
+        background-color: #cbc1a9;
+        box-shadow: 0 0px 5px black;
+        transition: height 0.1s;
+        overflow: auto;
+
+        /* 各個選項 */
+        .nav_link {
+            width: 100%;
+
+            /* 中間的線 */
+            &::after {
+                display: block;
+                margin: 0 auto;
+                content: "";
+                height: 1px;
+                width: 100px;
+                border-bottom: 2px solid #000;
+                background: black;
+            }
+        }
+
+        .product {
+            .page_link {
+                /* 箭頭icon定位 */
+                i {
+                    position: absolute;
+                    right: 5%;
+                    transition: all 0.2s;
+                }
+                /* 箭頭切換變形 */
+                .i-turn {
+                    transform: rotate(180deg);
+                }
+            }
+            /* 商品選項變色 */
+            &:hover .product_link {
+                background-color: #b47804;
+            }
+
+            /* 商品下拉展開切換 */
+            .ham-on {
+                height: 150px;
+                background-color: #cbc1a9;
+            }
+        }
+    }
+}
