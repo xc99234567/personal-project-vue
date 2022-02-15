@@ -1,0 +1,116 @@
+/* form */
+.contact_wrapper {
+    width: 100%;
+    background-color: #CBC1A9;
+    padding: 50px 0;
+
+    /* form內容wrapper */
+    .content_wrapper {
+        max-width: 590px;
+        width: 100%;
+        margin: 0 auto;
+
+        /* title */
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+
+        /* form */
+        form {
+            width: 100%;
+
+            /* form label */
+            .text_ele {
+
+                label {
+                    display: inline-block;
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                /* input框 */
+                input {
+                    width: 99%;
+                    border-radius: 5px;
+                    height: 24px;
+                    font-size: 20px;
+                }
+
+                /* 中間黑線 */
+                .black_line {
+                    width: 100%;
+                    height: 2px;
+                    background: #000;
+                    margin: 32px auto;
+                }
+
+                /* 多行輸入框 */
+                textarea {
+                    width: 99%;
+                    border-radius: 5px;
+                    resize: vertical;
+                    min-height: 10rem;
+                    font-size: 20px;
+                }
+            }
+
+            /* type error */
+            .type_error {
+
+                span {
+                    display: block;
+                    float: right;
+                    color: #C9211E;
+                    font-weight: bold;
+                    /* display: none; */
+                }
+
+                /* input error color */
+                input {
+                    background-color: rgba(243, 152, 150, 0.5);
+                }
+            }
+
+            /* 按鈕 */
+            button {
+                display: block;
+                margin: 0 auto;
+                width: 150px;
+                height: 50px;
+                border: 0;
+                border-radius: 10px;
+                background-color: #D5B2A0;
+                font-size: 20px;
+                font-weight: bold;
+                box-shadow: 1px 1px 5px black;
+                transition: all .2s linear;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact_wrapper .content_wrapper {
+        max-width: 80%;
+
+        form .text_ele {
+
+            .black_line {
+                margin: 16px auto;
+            }
+
+            textarea {
+                height: 5rem;
+            }
+        }
+    }
+}

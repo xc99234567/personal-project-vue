@@ -1,0 +1,143 @@
+/* about */
+.about_wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 100px auto;
+
+    /* 標題 */
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+}
+
+/* 內容wrapper */
+.content_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    /* 圖片wrapper */
+    .img_wrapper {
+        position: relative;
+        width: 49.33%;
+        height: 373px;
+
+        /* 圖片 */
+        img {
+            position: absolute;
+            width: 100%;
+            height: 373px;
+            object-fit: cover;
+            border-radius: 20px;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            animation: about_img 20s linear infinite;
+
+            &:nth-child(2) {
+                animation-delay: 5s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 10s;
+            }
+
+            &:nth-child(4) {
+                animation-delay: 15s;
+            }
+        }
+    }
+
+    /* 文字 */
+    p {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}    /* 內容wrapper */
+.content_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    /* 圖片wrapper */
+    .img_wrapper {
+        position: relative;
+        width: 49.33%;
+        height: 373px;
+
+        /* 圖片 */
+        img {
+            position: absolute;
+            width: 100%;
+            height: 373px;
+            object-fit: cover;
+            border-radius: 20px;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            animation: about_img 20s linear infinite;
+
+            &:nth-child(2) {
+                animation-delay: 5s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 10s;
+            }
+
+            &:nth-child(4) {
+                animation-delay: 15s;
+            }
+        }
+    }
+
+    /* 文字 */
+    p {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+@media (max-width:767.98px) {
+    .about_wrapper .content_wrapper {
+        flex-direction: column;
+
+        .img_wrapper {
+            width: 70%;
+            height: 200px;
+
+            img {
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+        p {
+            display: block;
+            /* padding: 0 10px; */
+            margin-top: 30px;
+        }
+    }
+}
+
+/* 圖片輪播動畫 */
+@keyframes about_img {
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: .5;
+    }
+
+    30% {
+        opacity: 0;
+    }
+}

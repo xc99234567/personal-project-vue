@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <main>
         <BannerSwiper></BannerSwiper>
         <ProductSwiper></ProductSwiper>
         <ScrollBg></ScrollBg>
         <Feature></Feature>
         <IndexNews></IndexNews>
-    </div>
+    </main>
 </template>
 
 <script>
