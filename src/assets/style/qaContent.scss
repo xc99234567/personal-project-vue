@@ -1,0 +1,73 @@
+/* QA */
+.qa_wrapper {
+    box-sizing: border-box;
+    max-width: 794px;
+    width: 100%;
+    margin: 100px auto;
+    padding: 0 10px;
+
+    // 標題
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    // qa外層
+    .qa {
+        width: 100%;
+    }
+}
+
+// 每項qa
+.qa_item {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+
+    // 文字
+    span {
+        display: inline-block;
+        font-size: 20px;
+        padding: 15px 0;
+
+        &:first-child {
+            display: block;
+            font-weight: bold;
+            transition: color .4s;
+        }
+    }
+
+    // 順序的字
+    .q_ordinal {
+        margin-right: 10px;
+        height: 100%;
+        font-weight: bold;
+    }
+
+    // qa內容
+    .qa_text {
+        display: inline-block;
+
+        // 答
+        .qa_content {
+            font-size: 18px;
+            display: block;
+            transition: max-height, padding .4s;
+            max-height: 0;
+        }
+
+        // 收合
+        .-on {
+            padding: 20px 0;
+            max-height: 200px;
+        }
+    }
+
+    &:hover span:first-child {
+        color: #B47804;
+    }
+}
