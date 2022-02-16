@@ -5,7 +5,7 @@
             <h2 class="animate__animated animate__tada">我們的特色</h2>
             <div class="fea_item">
                 <img
-                    src="../assets/imgs/feature3.jpg"
+                    src="../../assets/imgs/feature3.jpg"
                     alt=""
                     class="fea_img fea_img1"
                     data-aos="flip-left"
@@ -42,7 +42,7 @@
                     </p>
                 </h3>
                 <img
-                    src="../assets/imgs/feature2.jpg"
+                    src="../../assets/imgs/feature2.jpg"
                     alt=""
                     class="fea_img fea_img2"
                     data-aos="flip-right"
@@ -62,5 +62,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/feature.scss';
+@import '../../assets/style/feature.scss';
 </style>

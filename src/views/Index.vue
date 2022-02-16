@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import BannerSwiper from "../components/BannerSwiper.vue";
-import ProductSwiper from "../components/ProductSwiper.vue";
-import ScrollBg from "../components/ScrollBg.vue";
-import Feature from "../components/Feature.vue";
-import IndexNews from '../components/IndexNews.vue';
+import BannerSwiper from "../components/index/BannerSwiper.vue";
+import ProductSwiper from "../components/index/ProductSwiper.vue";
+import ScrollBg from "../components/index/ScrollBg.vue";
+import Feature from "../components/index/Feature.vue";
+import IndexNews from '../components/index/IndexNews.vue';
 export default {
     name: "Index",
     components: {

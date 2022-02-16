@@ -4,7 +4,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <router-link :to="{ name: 'ProductList' }" class="product_link">
-                    <img src="../assets/imgs/main_product1.jpg" />
+                    <img src="../../assets/imgs/main_product1.jpg" />
                     <div class="black-bg">
                         <span class="pro-name"> 郵票 </span>
                     </div>
@@ -12,7 +12,7 @@
             </div>
             <div class="swiper-slide">
                 <router-link :to="{ name: 'ProductList' }" class="product_link">
-                    <img src="../assets/imgs/main_product2.jpg" />
+                    <img src="../../assets/imgs/main_product2.jpg" />
                     <div class="black-bg">
                         <span class="pro-name"> 硬幣 </span>
                     </div>
@@ -20,7 +20,7 @@
             </div>
             <div class="swiper-slide">
                 <router-link :to="{ name: 'ProductList' }" class="product_link">
-                    <img src="../assets/imgs/main_product3.jpg" />
+                    <img src="../../assets/imgs/main_product3.jpg" />
                     <div class="black-bg">
                         <span class="pro-name"> 紙幣 </span>
                     </div>
@@ -47,5 +47,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/style/mySwiper.scss";
+@import "../../assets/style/mySwiper.scss";
 </style>

@@ -3,10 +3,10 @@
         <h2 class="animate__animated animate__tada">關於我們</h2>
         <div class="content_wrapper">
             <div class="img_wrapper" data-aos="flip-left">
-                <img src="../assets/imgs/about1.jpg" alt="" />
-                <img src="../assets/imgs/about2.jpg" alt="" />
-                <img src="../assets/imgs/about3.jpg" alt="" />
-                <img src="../assets/imgs/about4.jpg" alt="" />
+                <img src="../../assets/imgs/about1.jpg" alt="" />
+                <img src="../../assets/imgs/about2.jpg" alt="" />
+                <img src="../../assets/imgs/about3.jpg" alt="" />
+                <img src="../../assets/imgs/about4.jpg" alt="" />
             </div>
             <p data-aos="flip-right">
                 每個人從小或多或少都收集過一些東西
@@ -32,5 +32,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/aboutUs.scss';
+@import '../../assets/style/aboutUs.scss';
 </style>

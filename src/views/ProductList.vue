@@ -10,8 +10,8 @@
 
 <script>
 import BannerPage from "../components/BannerPage.vue";
-import ProdListFilter from "../components/ProdListFilter.vue";
-import ProdList from "../components/ProdList.vue";
+import ProdListFilter from "../components/productList/ProdListFilter.vue";
+import ProdList from "../components/productList/ProdList.vue";
 export default {
     name: "ProductList",
     components:{BannerPage, ProdListFilter, ProdList},

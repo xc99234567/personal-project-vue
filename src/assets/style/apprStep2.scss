@@ -1,0 +1,95 @@
+/* step 2 */
+.step2_wrapper {
+    width: 100%;
+    background-color: #C3C0B0;
+    margin-bottom: 100px;
+    padding-bottom: 60px;
+
+    /* 內容區 */
+    .step2_content {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+
+        /* 標題 */
+        h2 {
+            text-align: center;
+            padding-top: 30px;
+            margin-bottom: 50px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* 內容 */
+        .content_wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        /* 方法元素 */
+        .appr_way {
+            width: 508px;
+            background-color: #EEECE1;
+            border-radius: 20px;
+            box-shadow: 1px 1px 5px black;
+
+            &:nth-child(1) {
+                margin-right: 20px;
+            }
+
+            /* 圖 */
+            .appr_way_img {
+                width: 100%;
+                height: 300px;
+                border-radius: 20px 20px 0 0;
+                box-shadow: 1px 1px 5px black;
+            }
+
+            /* 方式標題 */
+            span {
+                display: block;
+                font-size: 24px;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            /* 文字 */
+            p {
+                padding: 20px;
+                padding-top: 0;
+                font-size: 18px;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .step2_wrapper .step2_content .content_wrapper {
+        flex-direction: column;
+        align-items: center;
+
+        .appr_way:nth-child(1) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .step2_wrapper .step2_content .content_wrapper .appr_way {
+        width: 80%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .step2_wrapper .step2_content .content_wrapper .appr_way {
+        width: 90%;
+    }
+}

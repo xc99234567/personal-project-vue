@@ -9,7 +9,7 @@
 
 <script>
 import BannerPage from "../components/BannerPage.vue";
-import NewsContent from "../components/NewsContent.vue";
+import NewsContent from "../components/news/NewsContent.vue";
 import PageSelector from "../components/PageSelector.vue";
 export default {
     name: "News",

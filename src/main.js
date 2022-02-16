@@ -19,6 +19,12 @@ library.add(faUser, faCartShopping)
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
+
+
+// vue跳到指定位置套件
+import VueScrollTo from 'vue-scrollto';
+Vue.use(VueScrollTo)
+
 Vue.config.productionTip = false
 
 new Vue({

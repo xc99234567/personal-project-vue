@@ -1,0 +1,133 @@
+/* step 1 */
+.step1_wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    /* title */
+    h2 {
+        text-align: center;
+        padding-top: 30px;
+        margin-bottom: 50px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+}
+
+/* 內容 */
+.s1_content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    /* 右圖 */
+    img {
+        width: 49%;
+        border-radius: 20px;
+        margin-left: 20px;
+        box-shadow: 1px 1px 5px black;
+    }
+}
+
+/* 左側 */
+.s1_left {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    /* 左側文字 */
+    &>span {
+        display: inline-block;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 15%;
+        line-height: 2;
+    }
+
+    /* 按鈕外層 */
+    .btn_wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+
+        // 按鈕
+        .btn {
+            display: inline-block;
+            line-height: 50px;
+            width: 40%;
+            height: 50px;
+            text-decoration: none;
+            background-color: #D5B2A0;
+            text-align: center;
+            box-shadow: 1px 1px 5px black;
+            color: black;
+            font-size: 28px;
+            vertical-align: middle;
+            transition: all .2s;
+
+            /* 按鈕hover */
+            &:hover {
+                opacity: .7;
+            }
+
+            /* 按鈕字 */
+            span {
+                display: inline-block;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    .step1_wrapper .s1_content {
+        display: flex;
+        flex-direction: column-reverse;
+        box-sizing: border-box;
+        padding: 0 20px;
+
+        .s1_left {
+
+            &>span {
+                margin-top: 30px;
+            }
+
+            .btn_wrapper {
+                margin-top: 20px;
+            }
+        }
+
+        img {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .step1_wrapper .s1_content .s1_left .btn_wrapper a:first-child {
+        width: 45%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .step1_wrapper .s1_content .s1_left .btn_wrapper .btn {
+
+        &:first-child {
+            width: 50%;
+        }
+
+        span {
+            font-size: 18px;
+            font-weight: bold;
+            vertical-align: top;
+        }
+    }
+}

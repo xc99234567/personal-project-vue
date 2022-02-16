@@ -8,8 +8,8 @@
 
 <script>
 import BannerPage from "../components/BannerPage.vue";
-import AboutUs from "../components/AboutUs.vue";
-import AboutForm from "../components/AboutForm.vue";
+import AboutUs from "../components/about/AboutUs.vue";
+import AboutForm from "../components/about/AboutForm.vue";
 export default {
     name: "About",
     components: {

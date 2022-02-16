@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import ProdImgs from "../components/ProdImgs.vue";
-import ProdIntro from "../components/ProdIntro.vue";
+import ProdImgs from "../components/product/ProdImgs";
+import ProdIntro from "../components/product/ProdIntro.vue";
 export default {
     name: "Product",
     components: { ProdImgs, ProdIntro },

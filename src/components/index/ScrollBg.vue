@@ -13,7 +13,7 @@ export default {
     width: 100%;
     height: 200px;
     margin: 100px 0;
-    background-image: url(../assets/imgs/scroll_bg.jpg);
+    background-image: url(../../assets/imgs/scroll_bg.jpg);
     background-size: cover;
     background-position: center center;
 }

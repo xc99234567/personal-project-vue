@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import PageSelector from "./PageSelector.vue";
+import PageSelector from "../PageSelector.vue";
 
 export default {
     name: "ProdList",
@@ -59,5 +59,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/prodList.scss';
+@import '../../assets/style/prodList.scss';
 </style>

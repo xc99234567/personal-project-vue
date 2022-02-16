@@ -2,13 +2,13 @@
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="../assets/imgs/carousel1.jpg"/>
+                <img src="../../assets/imgs/carousel1.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="../assets/imgs/carousel2.jpg"/>
+                <img src="../../assets/imgs/carousel2.jpg"/>
             </div>
             <div class="swiper-slide">
-                <img src="../assets/imgs/banner_news2.jpg"/>
+                <img src="../../assets/imgs/banner_news2.jpg"/>
             </div>
         </div>
         <div class="swiper-button-next swiper-button"></div>
@@ -41,5 +41,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/style/mySwiper.scss";
+@import "../../assets/style/mySwiper.scss";
 </style>

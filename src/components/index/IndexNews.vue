@@ -54,5 +54,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/style/indexNews.scss";
+@import "../../assets/style/indexNews.scss";
 </style>

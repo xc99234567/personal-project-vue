@@ -47,5 +47,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/aboutForm.scss';
+@import '../../assets/style/aboutForm.scss';
 </style>

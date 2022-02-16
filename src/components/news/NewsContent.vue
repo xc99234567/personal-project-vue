@@ -36,5 +36,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/newsContent.scss';
+@import '../../assets/style/newsContent.scss';
 </style>
