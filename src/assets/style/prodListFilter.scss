@@ -1,0 +1,116 @@
+/* 左側選單wrapper */
+.product_category_wrapper {
+    width: 186px;
+    margin-right: 80px;
+
+    &>i {
+        display: none;
+    }
+
+    /* 商品分類標題 */
+    &>span {
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* 主要分類 */
+    .main_category {
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        padding-top: 15px;
+
+        /* 主要分類選項 */
+        li {
+            margin-bottom: 15px;
+
+            /* 主要分類選項點擊提示hover */
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    /* 篩選wrapper */
+    .filter_wrapper {
+        margin-top: 15px;
+        border-bottom: 1px solid #000;
+        // transition: height;
+
+        /* 篩選title */
+        .filter_title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            i {
+                transition: transform .5s;
+            }
+
+            .-close {
+                transform: rotate(180deg);
+            }
+
+            /* title點擊提示hover */
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        /* 複選項 */
+        form {
+            max-height: 600px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            transition: max-height 0.4s;
+            overflow: hidden;
+
+            /* 選項字hover */
+            label:hover span {
+                opacity: 0.7;
+            }
+        }
+
+        // filter收合
+        .-form_close{
+            max-height: 0;
+            overflow: hidden;
+        }
+    }
+
+}
+
+@media (max-width: 767.98px) {
+    .product_category_wrapper {
+        box-sizing: border-box;
+        padding: 0 10px;
+        position: fixed;
+        z-index: 3;
+        background: #CBC1A9;
+        left: -100%;
+        margin: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        transition: left .4s;
+
+        &>i {
+            display: block;
+            font-size: 30px;
+            height: 30px;
+            width: 30px;
+            margin: 0 0 0 auto;
+        }
+    }
+
+    .-wrapper-on {
+        left: 0;
+    }
+}
+

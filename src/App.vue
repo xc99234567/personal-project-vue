@@ -17,11 +17,13 @@ export default {
     mounted() {
         Aos.init();
     },
+
 }
 </script>
 
 <style lang="scss">
 @import '../node_modules/aos/dist/aos.css';
+
 * {
     font-family: "Microsoft JhengHei", sans-serif;
     font-weight: bold;
@@ -30,5 +32,8 @@ export default {
 body {
     background-color: #eeece1;
     box-sizing: border-box;
+}
+main{
+    margin-top: 25px;
 }
 </style>

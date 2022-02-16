@@ -4,6 +4,7 @@ import Index from '../views/Index.vue'
 import About from '../views/About.vue'
 import News from '../views/News.vue'
 import ProductList from '../views/ProductList.vue'
+import Product from '../views/Product.vue'
 import Appraisal from '../views/Appraisal.vue'
 import Qa from '../views/Qa.vue'
 
@@ -41,6 +42,14 @@ const routes = [
       component: ProductList,
       meta: {
         title: '商品列表'
+      }
+    },
+    {
+      path: '/productList/:id/:productName',
+      name: 'Product',
+      component: Product,
+      meta: {
+        title: '商品內頁'
       }
     },
     {

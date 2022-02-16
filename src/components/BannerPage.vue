@@ -1,12 +1,13 @@
 <template>
     <div class="banner">
-        <img src="../../public/img/source/banner_about.jpg" />
+        <img :src="`./img/source/${bannerImg}`" />
     </div>
 </template>
 
 <script>
 export default {
     name: "BannerPage",
+    props:['bannerImg']
 };
 </script>
 

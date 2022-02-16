@@ -23,6 +23,14 @@ export default {
         Feature,
         IndexNews
     },
+    data() {
+        return {
+            currentPage: 'index'
+        }
+    },
+    mounted() {
+      this.$bus.$emit('currentPage', this.currentPage)
+    },
 };
 </script>
 

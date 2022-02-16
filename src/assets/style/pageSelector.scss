@@ -1,0 +1,53 @@
+/* 頁碼 */
+.pages_wrapper {
+    margin-top: 25px;
+    height: 40px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 50px;
+
+    /* 各個頁數 */
+    li {
+        height: 100%;
+        text-align: center;
+        line-height: 40px;
+
+        /* 樣式 */
+        a {
+            display: inline-block;
+            background-color: white;
+            width: 30px;
+            height: 100%;
+            color: #000;
+            border: 1px solid #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.2s linear;
+
+            /* hover */
+            &:hover {
+                background-color: #b47804;
+                color: white;
+            }
+        }
+
+        /* 左右圓角 */
+        &:first-child a {
+            border-radius: 10px 0 0 10px;
+        }
+
+        &:last-child a {
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* 當前頁面題是 */
+        .current_page {
+            background-color: #b47804;
+            color: white;
+        }
+    }
+}

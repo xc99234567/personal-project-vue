@@ -1,0 +1,178 @@
+/* 商品右側wrapper */
+.product_content_wrapper {
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+
+    /* 排序 */
+    .sort_mode {
+        padding-bottom: 10px;
+        display: flex;
+        margin-bottom: 14px;
+        position: relative;
+        width: 120px;
+        cursor: pointer;
+
+        // 箭頭icon
+        i {
+            margin-left: calc(120px - 64px - 21px);
+            transition: transform .3s;
+        }
+
+        // 展開時
+        .-i_on {
+            transform: rotate(180deg);
+        }
+
+        // 下拉選單
+        .sort_down {
+            border: 1px solid #000;
+            position: absolute;
+            top: 100%;
+            background-color: #ccc;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0px 5px 5px black;
+            border: none;
+            height: 0px;
+            overflow: hidden;
+            transition: height .3s;
+            /* visibility: visible; */
+
+            // 選項
+            button {
+                border: none;
+                height: 40px;
+                font-size: 16px;
+                transition: background-color .3s;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #B47804;
+                }
+            }
+        }
+
+        // 展開時
+        .-down_on {
+            height: 120px;
+        }
+    }
+
+    // 小螢幕時篩選的按鈕
+    .filter-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 20px;
+        width: 100px;
+        transition: background-color .3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #B47804;
+        }
+
+        span {
+            padding-right: 10px;
+        }
+    }
+
+    /* 商品列表 */
+    .product_content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        /* 個別商品 */
+        .products_link {
+            display: inline-block;
+            width: calc((100% - 60px) / 4);
+            height: 319px;
+            margin-right: 20px;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: box-shadow .5s;
+            overflow: hidden;
+
+            &:hover {
+                box-shadow: 0px 0px 10px black;
+            }
+
+            /* 商品圖 */
+            .pd_bg {
+                width: 100%;
+                height: 208.75px;
+                background-color: white;
+                margin-bottom: 15px;
+                transition: opacity 0.2s linear;
+
+                /* 商品圖 */
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: scale-down;
+                }
+
+                /* 修正圖片 */
+                .bg_modify {
+                    object-fit: contain;
+                }
+            }
+
+            /* 商品元素hover */
+            &:hover .pd_bg {
+                opacity: 0.8;
+
+            }
+
+            /* 下方文字 */
+            .pd_text {
+                width: 100%;
+                font-size: 18px;
+                color: black;
+                text-align: center;
+
+                /* 下方文字 */
+                span {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .product_content_wrapper>button {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 992px) {
+    .product_content_wrapper .product_content a:nth-child(4n) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .product_content_wrapper .product_content a {
+        width: calc((100% - 60px) / 3);
+    }
+
+    .product_content_wrapper .product_content a:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
+@media  (max-width: 767.98px) {
+    .product_content_wrapper .product_content .products_link {
+        width: calc((100% - 60px) / 2);
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+}

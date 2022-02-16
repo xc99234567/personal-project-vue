@@ -1,0 +1,146 @@
+/* news wrapper */
+.news_wrapper {
+    max-width: 794px;
+    width: 100%;
+    margin: 100px auto 50px auto;
+    position: relative;
+
+    /* news title */
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    /* 切換按鈕 wrapper */
+    .switch_wrapper {
+        text-align: right;
+        position: absolute;
+        right: 0;
+        top: 40px;
+
+        /* 切換的文字 */
+        span {
+            display: inline-block;
+        }
+
+        /* 切換的圖標 */
+        i {
+            margin-left: 5px;
+            padding: 3px;
+            border-radius: 5px;
+            border: 1px solid #000;
+
+            /* 按鈕hover */
+            &:hover {
+                cursor: pointer;
+                background-color: #B47804;
+                color: white;
+            }
+        }
+
+        /* 當前模式樣式 */
+        .cuttent_mode {
+            background-color: #B47804;
+            color: white;
+        }
+    }
+}
+
+/* 整個消息 */
+.news_ele {
+    width: 100%;
+
+    /* news元素 */
+    .news {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid #000;
+        text-decoration: none;
+        margin-bottom: 50px;
+
+        /* news圖 */
+        img {
+            display: block;
+            width: 285px;
+            height: 200px;
+            object-fit: fill;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            margin-right: 20px;
+            box-shadow: 1px 1px 5px black;
+            transition: transform 0.2s linear;
+        }
+
+        /* news圖hover */
+        &:hover img {
+            transform: scale(1.05);
+        }
+
+        /* 右側文字 */
+        .news_text {
+            height: 200px;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+
+            /* 右側文字 */
+            span {
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            /* 右側文字 */
+            .news_date {
+                font-size: 18px;
+            }
+
+            .news_title {
+                font-size: 24px;
+            }
+
+            .news_content {
+                font-size: 18px;
+                margin: 0;
+                max-height: 70px;
+                overflow: hidden;
+            }
+
+            /* read more */
+            .news_read {
+                position: absolute;
+                margin: 0;
+                bottom: 0;
+                right: 0;
+                color: #C9211E;
+            }
+        }
+    }
+}
+
+@media (max-width: 793.98px) {
+    .news_wrapper {
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .news_wrapper .news_ele .news {
+        box-sizing: border-box;
+        flex-direction: column;
+        padding: 0 10px;
+        align-items: center;
+
+        img {
+            margin-right: 0;
+        }
+
+        .news_text .news_read {
+            bottom: 10px;
+        }
+    }
+}
