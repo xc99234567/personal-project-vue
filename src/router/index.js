@@ -48,6 +48,7 @@ const routes = [
       path: '/productList/:id/:productName',
       name: 'Product',
       component: Product,
+      props: true,
       meta: {
         title: '商品內頁'
       }
